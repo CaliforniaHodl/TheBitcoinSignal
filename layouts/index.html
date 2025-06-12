@@ -32,15 +32,29 @@
 
 
     <div class="row justify-content-between gap-4">
-  {{ $events := where .Site.RegularPages "Type" "articles" }}
-    {{ if $events }}
-      {{ range $event := $events }}
-        <p>{{ $event.Title }}</p> <!-- Fallback to .Title for standard title -->
-        <!-- Debug: {{ $event.Params.title }} --> <!-- If you specifically need Params.title -->
-      {{ end }}
-    {{ else }}
-      <p>No articles found.</p>
-  {{ end }}
+    {{ $events := where .Site.RegularPages "Type" "articles" }}
+    {{ $firstThree := first 3 $events }}
+    {{ range $event := $firstThree }}
+    {{ $event := . }}
+
+    <div class="col-12 col-lg">
+      <div class="article-card">
+        <a href="{{ $event.Permalink }}">
+          <div class="image">
+            <img src="{{$event.Params.image }}" alt="{{$event.Params.alt }}" class="w-100">
+          </div>
+          <div class="content">
+            <p class="small">{{$event.Params.date | time.Format "June, 2, 2006" }}</p>
+            <h4 class="title">{{$event.Params.title }}</h4>
+            <p>{{$event.Params.description }}</p>
+          </div>
+          <span class="sr-only"> link to the next great article</span>
+        </a>
+      </div>
+    </div>
+
+
+    {{ end }}
     </div>
   </div>
 </section>

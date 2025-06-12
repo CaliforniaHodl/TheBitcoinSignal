@@ -1,1 +1,52 @@
-<h1>CTA</h1>
+<section id="cta-subscribe-section">
+    <div class="site-container-1340">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-6">
+                <div class="text-center">
+                    <h3>Sign up for our newsletter!</h3>
+                    <p>Stay up to date on the latest signal</p>
+                    <form
+                        name="subscribe-form"
+                        method="POST"
+                        netlify-honeypot="bot-field"
+                        netlify
+                        action="/thank-you/subscribe"
+                        >
+                        <div class="row" style="display: none">
+                            <div class="col-12">
+                            <p>
+                                <label for="honeypot">Don't fill this out if you're human:</label>
+                                <input type="text" name="bot-field" id="bot-field" />
+                            </p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mt-4">
+                            <div class="col-12 col-lg-6">
+                            <label for="email" class="sr-only">Email</label>
+                            <div class="field-container form-group-form-input-style">
+                                <input
+                                class="form-input-style form-control"
+                                name="email"
+                                type="email"
+                                placeholder="Email"
+                                required
+                                />
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-center pt-4">
+                            <div class="col-12 col-lg-6 text-center mt-4">
+                            <button type="submit" class="btn-primary btn-large">
+                                Sign me up
+                            </button>
+                            </div>
+                        </div>
+                        </form>
+  
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

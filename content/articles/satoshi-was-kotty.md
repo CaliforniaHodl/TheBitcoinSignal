@@ -9,6 +9,7 @@ alt: Satoshi was Kotty
 VolumeNumber: 1
 priority: "0.5"
 private: false
+cta: true
 date: 2025-06-11T22:23:00.000Z
 type: articles
 js:
