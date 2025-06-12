@@ -1,10 +1,48 @@
 {{ define "main" }}
-  <div class="row">
-    <div class="col-12 col-lg-6">
-        <h1>testing column1</h1>
-    </div>
-    <div class="col-12 col-lg-6">
-        <h1>testing column2</h1>
+
+<section id="index-hero-section">
+  <div class="site-container-1340">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1>The Bitcoin Signal</h1>
+        <h5>A bitcoin signal for you tune into</h5>
+      </div>
     </div>
   </div>
+</section>
+
+
+<section id="index-newest-issues-section">
+  <div class="site-container-1340">
+    <div class="row">
+      <div class="col-12"></div>
+    </div>
+  </div>
+</section>
+
+<section id="index-random-article-section">
+  <div class="site-container-1340">
+    <div class="row text-center">
+      <div class="col-12 ">
+        <h3>Check out more articles</h3>
+      </div>
+    </div>
+
+
+
+
+    <div class="row justify-content-between gap-4">
+  {{ $events := where .Site.RegularPages "Type" "articles" }}
+    {{ if $events }}
+      {{ range $event := $events }}
+        <p>{{ $event.Title }}</p> <!-- Fallback to .Title for standard title -->
+        <!-- Debug: {{ $event.Params.title }} --> <!-- If you specifically need Params.title -->
+      {{ end }}
+    {{ else }}
+      <p>No articles found.</p>
+  {{ end }}
+    </div>
+  </div>
+</section>
+
 {{ end }}

@@ -51,9 +51,7 @@ collections:
     - {label: Priority, name: priority, widget: string,  default: '0.5'}
     - {label: Private, name: private, widget: boolean,  default: false}
     - {label: "Publish Date", name: "date", widget: "datetime"}
-    - {label: "Update  Date", name: "updatedate", widget: "datetime"}
-    - {label: "Type", name: "type", widget: string,  default: 'issues'}
-    - {label: "Layout", name: "layout", widget: string,  default: 'issues/articles'}
+    - {label: "Type", name: "type", widget: string,  default: 'articles'}
     - {label: 'JavaScript', name: 'js', widget: 'list',  default: ['blog.js']}
     - {label: 'CSS', name: 'css', widget: 'list', default: ['issues.css']}
     - {label: "Body", name: "body", widget: "markdown"}
