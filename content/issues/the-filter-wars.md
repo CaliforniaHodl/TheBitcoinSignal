@@ -6,6 +6,7 @@ volume: 1
 seoimage: /images/uploads/pizza-3007395.jpg
 image: /images/uploads/pizza-3007395.jpg
 alt: pizza
+private: false
 priority: "0.8"
 type: issues
 js:
