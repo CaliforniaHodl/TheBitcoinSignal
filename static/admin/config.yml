@@ -1,0 +1,57 @@
+backend:
+  name: github
+  repo: CaliforniaHodl/TheBitcoinSignal
+
+  branch: master # Branch to update (optional; defaults to master)
+
+
+# This line should *not* be indented
+publish_mode: editorial_workflow
+
+# These lines should *not* be indented
+media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+
+collections:
+  # Blog
+ 
+  - label: "Issues" # Used in the UI
+    name: "issuesPages" # Used in routes, e.g., /admin/collections/blog
+    folder: "content/issues" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{title}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+    - {label: "Title", name: "title", widget: "string"}
+    - {label: Description, name: description, widget: string}
+    - {label: Slug, name: slug, widget: string}
+    - {label: "Volume", name: "volume", widget: number}
+    - {label: SEOImage, name: seoimage, widget: image}
+    - {label: Image, name: image, widget: image}
+    - {label: Alt, name: alt, widget: string}
+    - {label: Priority, name: priority, widget: string,  default: '0.8'}
+    - {label: "Type", name: "type", widget: string,  default: 'issues'}
+    - {label: 'JavaScript', name: 'js', widget: 'list',  default: ['blog.js']}
+    - {label: 'CSS', name: 'css', widget: 'list', default: ['issues.css']}
+ 
+  - label: "Articles" # Used in the UI
+    name: "articlesPages" # Used in routes, e.g., /admin/collections/blog
+    folder: "content/issues/articles" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+    - {label: "Title", name: "title", widget: "string"}
+    - {label: "PageTitle", name: "PageTitle", widget: "string", required: false}
+    - {label: Description, name: description, widget: string}
+    - {label: Slug, name: slug, widget: string}
+    - {label: SEOImage, name: seoimage, widget: image}
+    - {label: Image, name: image, widget: image}
+    - {label: Alt, name: alt, widget: string}
+    - {label: "Volume Number", name: "VolumeNumber", widget: number}
+    - {label: Priority, name: priority, widget: string,  default: '0.5'}
+    - {label: "Publish Date", name: "date", widget: "datetime"}
+    - {label: "Update  Date", name: "updatedate", widget: "datetime"}
+    - {label: 'JavaScript', name: 'js', widget: 'list',  default: ['blog.js']}
+    - {label: 'CSS', name: 'css', widget: 'list', default: ['issues.css']}
+    - {label: "Body", name: "body", widget: "markdown"}
+
+

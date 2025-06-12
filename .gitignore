@@ -1,0 +1,7 @@
+# Hugo cache and generated files
+/public/
+public
+/resources/
+
+# Node or other tooling
+node_modules/

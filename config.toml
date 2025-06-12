@@ -1,0 +1,6 @@
+baseURL = "http://thebitcoinsignal.netlify.app/"
+environment = "prod"
+languageCode = "en-us"
+
+[params]
+  CompanyName = "The Bitcoin Signal"
