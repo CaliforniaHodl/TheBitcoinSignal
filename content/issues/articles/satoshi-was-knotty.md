@@ -8,6 +8,8 @@ image: /images/uploads/vqrzp5gkxruzrgxu-generated_image.jpg
 alt: a bear
 VolumeNumber: 2
 private: true
+type: issues
+layout: issues/articles
 priority: "0.5"
 date: 2025-07-02T20:55:00.000Z
 updatedate: 2025-06-11T20:55:00.000Z
