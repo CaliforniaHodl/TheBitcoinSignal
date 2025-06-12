@@ -28,11 +28,9 @@ collections:
     - {label: SEOImage, name: seoimage, widget: image}
     - {label: Image, name: image, widget: image}
     - {label: Alt, name: alt, widget: string}
-    - {label: "Type", name: "type", widget: string,  default: 'issues'}
-    - {label: "Layout", name: "layout", widget: string,  default: 'resources/blog'}
     - {label: Private, name: private, widget: boolean,  default: false}
-    - {label: Priority, name: priority, widget: string,  default: '0.8'}
     - {label: "Type", name: "type", widget: string,  default: 'issues'}
+    - {label: Priority, name: priority, widget: string,  default: '0.8'}
     - {label: 'JavaScript', name: 'js', widget: 'list',  default: ['blog.js']}
     - {label: 'CSS', name: 'css', widget: 'list', default: ['issues.css']}
  
